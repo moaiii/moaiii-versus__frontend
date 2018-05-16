@@ -1,0 +1,17 @@
+{
+  "name": "versus__front-end",
+  "version": "1.0.0",
+  "description": "Top level front end module for versus client - web and mobile",
+  "main": "index.js",
+  "scripts": {
+    "start:web": "cd web && npm start",
+    "start:mobile": "cd mobile && npm start",
+    "test": "jest"
+  },
+  "author": "Christopher Melville aka moaiii",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6"
+  }
+}
