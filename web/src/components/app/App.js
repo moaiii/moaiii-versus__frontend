@@ -10,7 +10,7 @@ import store from '@versus-store';
 
 class App extends Component {
   render() {
-    const {counter} = this.props;
+    const {leagues} = this.props;
 
     return (
       <div className="App">
@@ -18,7 +18,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Versus Root</h1>
         </header>
         <p className="App-intro">
-          {counter}
+          {leagues}
         </p>
       </div>
     );
@@ -27,7 +27,7 @@ class App extends Component {
 
 const storeToProps = (store) => {
   return {
-    counter: store.testReducer.counter
+    leagues: store.leaguesReducer.leagues
   }
 }
 

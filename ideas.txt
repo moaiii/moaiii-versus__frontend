@@ -1,0 +1,22 @@
+Ranking teams based on results for a specific referee
+The bobby madden league for example
+
+Ranking by:
+
+Attendance 
+Yellow/ Red cards
+Goals
+Corners
+HT scores 
+Minute by minute? <0 -- 45 -- 90> range slider
+Wins
+Loses (inverse of wins)
+
+Express app to host the web front end
+
+S3 file hosting team data
+- manager
+- stadium
+- date formed
+- colors
+- link to crest svg

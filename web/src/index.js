@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import router from './router';
 import {Provider} from 'react-redux';
 import store from '@versus-store';
-import './index.css';
+import './stylesheets/index.css';
 
 class VersusRoot extends Component {
   render() {

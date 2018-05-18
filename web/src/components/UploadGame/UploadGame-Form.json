@@ -1,0 +1,521 @@
+{
+  "league": {
+    "input": {
+      "type": "",
+      "amount": 1,
+      "name": "league",
+      "value": "",
+      "required": true,
+      "min": null,
+      "max": null,
+      "disabled": false,
+      "form": "upload-game",
+      "select": {
+        "isSelect": true,
+        "size": 5
+      },
+      "options": {
+        "reducer": "leagues",
+        "action": "getLeagues"
+      }
+    }
+  },
+  "season": {
+    "input": {
+      "type": "",
+      "amount": 1,
+      "name": "season.start",
+      "value": "2017",
+      "required": true,
+      "min": 2009,
+      "max": 2019,
+      "disabled": false,
+      "form": "upload-game",
+      "select": {
+        "isSelect": true,
+        "size": 5
+      },
+      "options": {
+        "reducer": "seasons",
+        "action": "getAllSeasons"
+      }
+    }
+  },
+  "stadium": {
+    "input": {
+      "type": "text",
+      "amount": 1,
+      "name": "stadium",
+      "value": "",
+      "required": true,
+      "min": null,
+      "max": null,
+      "disabled": false,
+      "form": "upload-game",
+      "select": {
+        "isSelect": true,
+        "size": 5
+      },
+      "options": {
+        "reducer": "stadiums",
+        "action": "getAllStadiums"
+      }
+    }
+  },
+  "city": "~auto populate~",
+  "referee": {
+    "input": {
+      "type": "",
+      "amount": 1,
+      "name": "referee",
+      "value": "",
+      "required": true,
+      "min": null,
+      "max": null,
+      "disabled": false,
+      "form": "upload-game",
+      "select": {
+        "isSelect": true,
+        "size": 5
+      },
+      "options": {
+        "reducer": "referees",
+        "action": "getAllReferees"
+      }
+    }
+  },    
+  "attendance": {
+    "input": {
+      "type": "text",
+      "amount": 1,
+      "name": "attendance",
+      "value": "1",
+      "required": true,
+      "min": 0,
+      "max": 70000,
+      "disabled": false,
+      "form": "upload-game",
+      "select": {
+        "isSelect": false,
+        "size": null
+      },
+      "options": {
+        "reducer": "",
+        "action": null
+      }
+    }
+  },
+  "date": {
+    "input": {
+      "type": "date",
+      "amount": 1,
+      "name": "date",
+      "value": "today",
+      "required": true,
+      "min": 0,
+      "max": "today",
+      "disabled": false,
+      "form": "upload-game",
+      "select": {
+        "isSelect": false,
+        "size": null
+      },
+      "options": {
+        "reducer": "",
+        "action": null
+      }
+    }
+  },
+  "score": {
+    "ht": {
+      "input": {
+        "type": "text",
+        "amount": 2,
+        "name": "score.ht",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 20,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    },
+    "ft": {
+      "input": {
+        "type": "text",
+        "amount": 2,
+        "name": "score.ft",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 20,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    }
+  },
+  "away": {
+    "name": {
+      "input": {
+        "type": "",
+        "amount": 1,
+        "name": "home.name",
+        "value": "",
+        "required": true,
+        "min": null,
+        "max": null,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": true,
+          "size": 5
+        },
+        "options": {
+          "reducer": "teams",
+          "action": "getTeamsByLeague"
+        }
+      }
+    },
+    "goals": {
+      "input": {
+        "type": "text",
+        "amount": 1,
+        "name": "home.goals",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 20,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    },      
+    "cards": {
+      "yellow": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.cards.yellow",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 20,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      },        
+      "red": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.cards.red",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 5,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      }
+    },
+    "shots": {
+      "on-target": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.shots.on-target",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 100,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      },        
+      "off-target": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.shots.off-target",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 100,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      }
+    },
+    "corners": {
+      "input": {
+        "type": "text",
+        "amount": 1,
+        "name": "home.corners",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 100,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    },
+    "freekicks": {
+      "input": {
+        "type": "text",
+        "amount": 1,
+        "name": "home.freekicks",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 100,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    }
+  },
+  "home": {
+    "name": {
+      "input": {
+        "type": "",
+        "amount": 1,
+        "name": "home.name",
+        "value": "",
+        "required": true,
+        "min": null,
+        "max": null,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": true,
+          "size": 5
+        },
+        "options": {
+          "reducer": "teams",
+          "action": "getTeamsByLeague"
+        }
+      }
+    },
+    "goals": {
+      "input": {
+        "type": "text",
+        "amount": 1,
+        "name": "home.goals",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 20,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    },      
+    "cards": {
+      "yellow": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.cards.yellow",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 20,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      },        
+      "red": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.cards.red",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 5,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      }
+    },
+    "shots": {
+      "on-target": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.shots.on-target",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 100,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      },        
+      "off-target": {
+        "input": {
+          "type": "text",
+          "amount": 1,
+          "name": "home.shots.off-target",
+          "value": 0,
+          "required": true,
+          "min": 0,
+          "max": 100,
+          "disabled": false,
+          "form": "upload-game",
+          "select": {
+            "isSelect": false,
+            "size": null
+          },
+          "options": {
+            "reducer": "",
+            "action": null
+          }
+        }
+      }
+    },
+    "corners": {
+      "input": {
+        "type": "text",
+        "amount": 1,
+        "name": "home.corners",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 100,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    },
+    "freekicks": {
+      "input": {
+        "type": "text",
+        "amount": 1,
+        "name": "home.freekicks",
+        "value": 0,
+        "required": true,
+        "min": 0,
+        "max": 100,
+        "disabled": false,
+        "form": "upload-game",
+        "select": {
+          "isSelect": false,
+          "size": null
+        },
+        "options": {
+          "reducer": "",
+          "action": null
+        }
+      }
+    }
+  }
+}
