@@ -1,21 +1,32 @@
 import axios from 'axios';
+import {apiDomain} from '../config'
 
-export function getLeagues(store, action) {
-  store.dispatch({
+const getLeagues = ({ dispatch }) => {
+
+  dispatch({
     type: 'GET_LEAGUES__PENDING'
   });
 
-  axios.get('https://zw0z5ika4b.execute-api.eu-west-1.amazonaws.com/latest/games')
+  axios.get(`${apiDomain}/competitions`, {
+    headers: { "X-Auth-Token": "d423d068c3314f3e9738b9ac002fd5fe" }
+  })
     .then(res => {
-      store.dispatch({
-        type: 'GET_LEAGUES__FUFILLED', 
+
+      dispatch({
+        type: 'GET_LEAGUES__FUFILLED',
         payload: res
       });
     })
     .catch(err => {
-      store.dispatch({
-        type: 'GET_LEAGUES__ERROR', 
+
+      dispatch({
+        type: 'GET_LEAGUES__ERROR',
         payload: err
       });
     })
+}
+
+export default {
+
+  getLeagues
 }

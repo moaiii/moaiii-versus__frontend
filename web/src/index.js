@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import router from './router';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from '@versus-store';
+
+
 import './stylesheets/index.css';
 
 class VersusRoot extends Component {
@@ -15,5 +17,5 @@ class VersusRoot extends Component {
   }
 }
 
-ReactDOM.render(<Provider store={store}><VersusRoot /></Provider>, 
+ReactDOM.render(<Provider store={store}><VersusRoot /></Provider>,
   document.getElementById('root'));

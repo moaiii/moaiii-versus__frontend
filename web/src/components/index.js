@@ -1,0 +1,1 @@
+export { default as UploadGame } from './UploadGame/UploadGame'

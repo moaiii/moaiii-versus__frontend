@@ -1,12 +1,12 @@
 // node_modules
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 // redux
 import store from '@versus-store';
 
 // sub-components
-import InputGenerator from '../Common/InputGenerator/InputGenerator';
+import { InputGenerator } from 'util';
 
 // data
 import FormMap from './UploadGame-Form.json';
@@ -16,11 +16,11 @@ class UploadGame extends Component {
     super();
 
     this.state = {};
+    console.log(InputGenerator)
   }
-
   componentDidMount() {
     let form = Object.assign({}, FormMap);
-    this.setState({form});
+    this.setState({ form });
   }
 
   onChange = (name, value) => {
@@ -31,7 +31,7 @@ class UploadGame extends Component {
     // const {} = this.props;
     // const {} = this.state;
 
-    const LeagueSelect = InputGenerator(FormMap.league.input, 
+    const LeagueSelect = InputGenerator(FormMap.league.input,
       (n, v) => this.onChange(n, v));
 
     // let SeasonSelect = InputGenerator(FormMap.season.input, 
@@ -42,10 +42,10 @@ class UploadGame extends Component {
 
     // let RefereeSelect = InputGenerator(FormMap.referee.input, 
     //   (n, v) => this.onChange(n, v));
-    
+
     // let AttendanceSelect = InputGenerator(FormMap.attendance.input, 
     //   (n, v) => this.onChange(n, v)); 
-      
+
     // let DateSelect = InputGenerator(FormMap.date.input,
     //   (n, v) => this.onChange(n, v));
 
@@ -63,13 +63,13 @@ class UploadGame extends Component {
 
     // let HomeYellowCardsSelect = InputGenerator(FormMap.home.cards.yellow.input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
-    
+
     // let HomeRedCardsSelect = InputGenerator(FormMap.home.cards.red.input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
 
     // let HomeShotsOnTargetSelect = InputGenerator(FormMap.home.shots['on-target'].input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
-    
+
     // let HomeShotsOffTarget = InputGenerator(FormMap.home.shots['off-target'].input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
 
@@ -78,7 +78,7 @@ class UploadGame extends Component {
 
     // let HomeFreekicks = InputGenerator(FormMap.home.freekicks.input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero
-    
+
     // // squad = [] // array of select boxes (min 16 in array)
 
     // let AwayNameSelect = InputGenerator(FormMap.away.name.input,
@@ -89,13 +89,13 @@ class UploadGame extends Component {
 
     // let AwayYellowCardsSelect = InputGenerator(FormMap.away.cards.yellow.input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
-    
+
     // let AwayRedCardsSelect = InputGenerator(FormMap.away.cards.red.input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
 
     // let AwayShotsOnTargetSelect = InputGenerator(FormMap.away.shots['on-target'].input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero 
-    
+
     // let AwayShotsOffTarget = InputGenerator(FormMap.away.shots['off-target'].input,
     //   (n, v) => this.onChange(n, v));  // number box cannot be below zero 
 
@@ -104,7 +104,7 @@ class UploadGame extends Component {
 
     // let AwayFreekicks = InputGenerator(FormMap.away.freekicks.input,
     //   (n, v) => this.onChange(n, v)); // number box cannot be below zero
-    
+
     // squad = [] // array of select boxes (min 16 in array)
 
     // let player_object = {
@@ -125,7 +125,7 @@ class UploadGame extends Component {
         <h1>Upload Game</h1>
         <div className="UploadGame__general">
           <h2>General data</h2>
-          <LeagueSelect props={FormMap.league.input} callback={this.onChange}/>
+          <LeagueSelect props={FormMap.league.input} callback={this.onChange} />
           {/* <StadiumSelect />
           <RefereeSelect />
           <AttendanceSelect />
@@ -144,7 +144,7 @@ class UploadGame extends Component {
             <HomeShotsOffTarget />
             <HomeCornersSelect />
             <HomeFreekicks /> */}
-          </div> 
+          </div>
           <div className="UploadGame__away-team">
             <h3>Away team</h3>
             {/* <AwayNameSelect />

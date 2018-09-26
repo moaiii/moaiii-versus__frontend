@@ -9,15 +9,21 @@ import seasons from './seasons.middleware';
 
 
 const appMiddleware = store => next => action => {
-  next(action);
-  console.log('inside app middleware, action > ', action)
-  // if(action.type === 'GET_LEAGUES') {
-    leaguesMiddleware.getLeagues(store, action, next);
 
-  // } else {
-  //   next(action);
-  // }
+  switch (action.type) {
 
+    case 'GET_LEAGUES':
+
+      leagues.getLeagues(store, action, next);
+      break;
+    default:
+    
+      next(action);
+      break;
+  }
+
+  console.log('inside app middleware, action > ', store)
+  // return next(action);
 }
 
 export default appMiddleware

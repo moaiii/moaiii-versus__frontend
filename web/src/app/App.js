@@ -1,16 +1,24 @@
 // node_modules
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 // redux
 import store from '@versus-store';
+import actions from '@versus-actions';
 
 // sub-components
-// ........
+// babel aliases
 
 class App extends Component {
+
+  componentDidMount() {
+    console.log('mounted');
+    store.dispatch(actions.leagues.getLeagues())
+  }
+
   render() {
-    const {leagues} = this.props;
+
+    const { leagues } = this.props;
 
     return (
       <div className="App">
@@ -18,14 +26,14 @@ class App extends Component {
           <h1 className="App-title">Welcome to Versus Rooter</h1>
         </header>
         <p className="App-intro">
-          {leagues}
+          {leagues && leagues.request.responseText}
         </p>
       </div>
     );
   }
 }
 
-const storeToProps = (store) => {
+const storeToProps = store => {
   return {
     leagues: store.leaguesReducer.leagues
   }
