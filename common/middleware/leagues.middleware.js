@@ -1,21 +1,25 @@
-import axios from 'axios';
+const leagues = {};
 
-export function getLeagues(store, action) {
-  store.dispatch({
-    type: 'GET_LEAGUES__PENDING'
-  });
+module.exports = leagues;
 
-  axios.get('https://zw0z5ika4b.execute-api.eu-west-1.amazonaws.com/latest/games')
-    .then(res => {
-      store.dispatch({
-        type: 'GET_LEAGUES__FUFILLED', 
-        payload: res
-      });
-    })
-    .catch(err => {
-      store.dispatch({
-        type: 'GET_LEAGUES__ERROR', 
-        payload: err
-      });
-    })
-}
+// import axios from 'axios';
+
+// export function getLeagues(store, action) {
+//   store.dispatch({
+//     type: 'GET_LEAGUES__PENDING'
+//   });
+
+//   axios.get('https://zw0z5ika4b.execute-api.eu-west-1.amazonaws.com/latest/games')
+//     .then(res => {
+//       store.dispatch({
+//         type: 'GET_LEAGUES__FUFILLED', 
+//         payload: res
+//       });
+//     })
+//     .catch(err => {
+//       store.dispatch({
+//         type: 'GET_LEAGUES__ERROR', 
+//         payload: err
+//       });
+//     })
+// }
