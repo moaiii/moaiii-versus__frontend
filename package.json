@@ -6,7 +6,11 @@
   "scripts": {
     "start:web": "cd web && npm start",
     "start:mobile": "cd mobile && npm start",
-    "test": "jest"
+    "deploy:web": "",
+    "deploy:mobile": "",
+    "test": "jest",
+    "test:web": "cd web & jest",
+    "test:mobile": "cd mobile & jest"
   },
   "author": "Christopher Melville aka moaiii",
   "license": "ISC",
@@ -14,8 +18,17 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "jest": "^22.4.4",
     "prop-types": "^15.6.1",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/mobile/",
+      "<rootDir>/web/"
+    ]
   }
 }

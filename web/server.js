@@ -5,11 +5,11 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/ping', function (req, res) {
+app.get('/ping', (req, res) => {
  return res.send('pong');
 });
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   console.log('/ home');
   return res.send('<h1>Versus web app express foundation</h1>');
 });

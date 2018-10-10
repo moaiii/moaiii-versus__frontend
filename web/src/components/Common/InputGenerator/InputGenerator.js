@@ -53,10 +53,10 @@ function InputGenerator({...props}, callback) {
       this.setState({
         value: props.value
       }, () => {
-        console.log(this)
         if(!this.state.hasMounted) {
           if(props.select.isSelect) {
             let $ = props.options;
+            console.log(actions, $.reducer, $.action);
             store.dispatch(actions[$.reducer][$.action]());
           }
           this.setState({hasMounted: true})
